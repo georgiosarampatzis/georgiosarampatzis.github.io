@@ -111,46 +111,102 @@ nav a:hover {
 
 .banner {
   position: relative;
-  min-height: 385px;
-  display: grid;
-  align-items: center;
-  padding: 3rem 7vw;
   overflow: hidden;
-  background:
-    linear-gradient(90deg, rgba(5, 23, 34, 0.90), rgba(12, 62, 82, 0.55)),
-    url("assets/research-banner.svg") center/cover no-repeat;
   color: white;
+  background: #061923;
+  border-bottom: 1px solid rgba(151, 211, 229, 0.16);
+}
+
+.banner-visual {
+  position: relative;
+  min-height: clamp(190px, 23vw, 310px);
+  background:
+    linear-gradient(90deg, rgba(4, 21, 31, 0.10), rgba(17, 76, 98, 0.06)),
+    url("modern-banner.svg") center/cover no-repeat;
+}
+
+.banner-visual::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 48%;
+  background: linear-gradient(to bottom, transparent, #061923);
+  pointer-events: none;
+}
+
+.banner-content {
+  position: relative;
+  padding: clamp(2rem, 4vw, 3.4rem) 7vw clamp(4.7rem, 6vw, 6rem);
+  background:
+    radial-gradient(circle at 86% 12%, rgba(49, 148, 181, 0.24), transparent 34%),
+    radial-gradient(circle at 65% 110%, rgba(104, 196, 218, 0.11), transparent 38%),
+    linear-gradient(135deg, #061923 0%, #082633 58%, #0b3040 100%);
+}
+
+.banner-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.34;
+  background-image:
+    linear-gradient(rgba(133, 202, 222, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(133, 202, 222, 0.045) 1px, transparent 1px);
+  background-size: 54px 54px;
+  pointer-events: none;
 }
 
 .banner-overlay {
-  max-width: 760px;
+  position: relative;
+  z-index: 1;
+  max-width: 920px;
 }
 
 .banner h1 {
-  max-width: 720px;
-  margin: 0.4rem 0 0.7rem;
-  font-size: clamp(2.6rem, 6vw, 5.4rem);
-  line-height: 1.02;
-  letter-spacing: -0.045em;
+  max-width: 850px;
+  margin: 0.55rem 0 0.85rem;
+  font-size: clamp(2.2rem, 4.15vw, 3.8rem);
+  line-height: 1.07;
+  letter-spacing: -0.042em;
+  text-wrap: balance;
 }
 
-.banner p {
-  max-width: 690px;
-  margin: 0;
-  font-size: 1.08rem;
-  color: rgba(255, 255, 255, 0.84);
+.hero-summary {
+  max-width: 790px !important;
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-size: clamp(1rem, 1.4vw, 1.14rem) !important;
 }
 
 .eyebrow {
-  font-size: 0.78rem !important;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  color: #8cd8e8 !important;
+  margin: 0 !important;
+  color: #82d8ee !important;
+  font-size: 0.74rem !important;
+  font-weight: 850;
+  letter-spacing: 0.15em;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.45rem;
+}
+
+.hero-tags span {
+  padding: 0.48rem 0.72rem;
+  color: rgba(232, 249, 253, 0.88);
+  background: rgba(126, 209, 231, 0.09);
+  border: 1px solid rgba(126, 209, 231, 0.20);
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.015em;
 }
 
 .page-shell {
   width: min(1380px, 92vw);
-  margin: -54px auto 0;
+  margin: -46px auto 0;
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
   gap: 2.7rem;
@@ -568,9 +624,30 @@ footer {
     padding: 0 1rem;
   }
 
-  .banner {
-    min-height: 330px;
-    padding: 2.4rem 1rem;
+  .banner-visual {
+    min-height: 150px;
+  }
+
+  .banner-content {
+    padding: 1.7rem 1rem 4.1rem;
+  }
+
+  .banner h1 {
+    font-size: clamp(2.05rem, 10vw, 2.8rem);
+    line-height: 1.08;
+  }
+
+  .eyebrow {
+    font-size: 0.66rem !important;
+    line-height: 1.7;
+  }
+
+  .hero-tags {
+    gap: 0.45rem;
+  }
+
+  .hero-tags span {
+    font-size: 0.72rem;
   }
 
   .page-shell {
