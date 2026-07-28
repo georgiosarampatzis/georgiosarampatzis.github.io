@@ -36,3 +36,20 @@ mainNav.querySelectorAll("a").forEach((link) => {
 });
 
 currentYear.textContent = new Date().getFullYear();
+
+
+const formStatus = document.getElementById("formStatus");
+
+if (formStatus) {
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("sent") === "1") {
+    formStatus.textContent = "Your message was sent successfully. Thank you!";
+
+    window.history.replaceState(
+      {},
+      document.title,
+      `${window.location.pathname}#contact`
+    );
+  }
+}
