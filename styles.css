@@ -119,7 +119,7 @@ nav a:hover {
 
 .banner-visual {
   position: relative;
-  min-height: clamp(190px, 23vw, 310px);
+  min-height: clamp(150px, 18vw, 220px);
   background:
     linear-gradient(90deg, rgba(4, 21, 31, 0.10), rgba(17, 76, 98, 0.06)),
     url("modern-banner.svg") center/cover no-repeat;
@@ -136,7 +136,7 @@ nav a:hover {
 
 .banner-content {
   position: relative;
-  padding: clamp(2rem, 4vw, 3.4rem) 7vw clamp(4.7rem, 6vw, 6rem);
+  padding: 1.1rem 7vw 1.35rem;
   background:
     radial-gradient(circle at 86% 12%, rgba(49, 148, 181, 0.24), transparent 34%),
     radial-gradient(circle at 65% 110%, rgba(104, 196, 218, 0.11), transparent 38%),
@@ -163,7 +163,7 @@ nav a:hover {
 
 .banner h1 {
   max-width: 850px;
-  margin: 0.55rem 0 0.85rem;
+  margin: 0.3rem 0 0.55rem;
   font-size: clamp(2.2rem, 4.15vw, 3.8rem);
   line-height: 1.07;
   letter-spacing: -0.042em;
@@ -189,7 +189,7 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
-  margin-top: 1.45rem;
+  margin-top: 0.95rem;
 }
 
 .hero-tags span {
@@ -206,7 +206,7 @@ nav a:hover {
 
 .page-shell {
   width: min(1380px, 92vw);
-  margin: -46px auto 0;
+  margin: -18px auto 0;
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
   gap: 2.7rem;
@@ -631,7 +631,7 @@ footer {
   }
 
   .banner-content {
-    padding: 1.7rem 1rem 4.1rem;
+    padding: 0.95rem 1rem 1.15rem;
   }
 
   .banner h1 {
