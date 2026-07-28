@@ -1055,3 +1055,11 @@ footer {
     min-height: auto;
   }
 }
+
+
+.publication-profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1.4rem;
+}
