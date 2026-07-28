@@ -85,7 +85,7 @@
 
   <!-- Subtle labels -->
   <g fill="#b4e4ed" opacity=".22" font-family="Arial, sans-serif" font-weight="700">
-    <text x="80" y="86" font-size="45">BI</text>
+    <text x="72" y="82" font-size="24">BUSINESS INTELLIGENCE</text>
     <text x="255" y="392" font-size="38">RAG</text>
     <text x="475" y="90" font-size="36">LLM</text>
     <text x="745" y="390" font-size="38">NLP</text>
