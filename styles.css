@@ -1190,3 +1190,39 @@ footer {
   text-align: center;
   font-size: 0.84rem;
 }
+
+
+/* Clickable skills */
+.skills-grid .skill-card {
+  position: relative;
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.skills-grid .skill-card::after {
+  content: "↗";
+  position: absolute;
+  top: 0.72rem;
+  right: 0.78rem;
+  color: var(--accent);
+  font-size: 0.86rem;
+  font-weight: 900;
+  opacity: 0;
+  transform: translate(-3px, 3px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.skills-grid .skill-card:hover::after,
+.skills-grid .skill-card:focus-visible::after {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.skills-grid .skill-card:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  outline-offset: 3px;
+  border-color: var(--accent);
+}
