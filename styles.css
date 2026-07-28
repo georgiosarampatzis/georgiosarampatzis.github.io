@@ -210,7 +210,7 @@ nav a:hover {
 
 .page-shell {
   width: min(1380px, 92vw);
-  margin: -24px auto 0;
+  margin: -8px auto 0;
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
   gap: 2.7rem;
@@ -1107,4 +1107,31 @@ footer {
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+
+/* Clean top banner without text */
+.banner-clean {
+  position: relative;
+  overflow: hidden;
+  background: #061923;
+}
+
+.banner-clean .banner-visual {
+  min-height: clamp(240px, 22vw, 340px);
+}
+
+.banner-clean .banner-visual::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 10%;
+  background: linear-gradient(to bottom, transparent, rgba(6, 25, 35, 0.14));
+  pointer-events: none;
+}
+
+@media (max-width: 650px) {
+  .banner-clean .banner-visual {
+    min-height: 180px;
+  }
 }
