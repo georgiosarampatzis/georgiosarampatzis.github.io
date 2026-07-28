@@ -230,10 +230,12 @@ nav a:hover {
   width: 116px;
   height: 116px;
   margin: -70px auto 1.15rem;
+  padding: 7px;
   border: 7px solid var(--surface);
   border-radius: 50%;
-  object-fit: cover;
-  background: var(--surface-soft);
+  object-fit: contain;
+  object-position: center;
+  background: #080808;
 }
 
 .profile-card h2 {
