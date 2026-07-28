@@ -747,3 +747,234 @@ footer {
 .contact-profile-links a:hover {
   text-decoration: underline;
 }
+
+
+/* Skills */
+.section-intro {
+  max-width: 820px;
+  margin: -0.5rem 0 1.7rem;
+  color: var(--muted);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  min-height: 132px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 0.75rem;
+  padding: 1rem 0.7rem;
+  text-align: center;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 26px rgba(26, 48, 66, 0.10);
+}
+
+.skill-card img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.skill-card span {
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.skill-letter {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  border-radius: 15px;
+  font-size: 0.92rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.skill-letter-hf {
+  font-size: 1.65rem;
+  background: linear-gradient(135deg, #7d6400, #d8aa00);
+}
+
+/* Research project cards */
+.research-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.research-project-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  box-shadow: 0 12px 28px rgba(26, 48, 66, 0.08);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.research-project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 18px 36px rgba(26, 48, 66, 0.13);
+}
+
+.project-logo {
+  min-height: 155px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 0.15rem;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.project-logo span {
+  font-size: clamp(1.7rem, 4vw, 2.65rem);
+  font-weight: 950;
+  letter-spacing: -0.04em;
+}
+
+.project-logo small {
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.16em;
+}
+
+.project-logo-joker {
+  background: linear-gradient(135deg, #562b7c, #b84eb4);
+}
+
+.project-logo-simpletext {
+  background: linear-gradient(135deg, #0a5969, #2aa0a8);
+}
+
+.project-logo-semeval {
+  background: linear-gradient(135deg, #8a3e20, #d67c31);
+}
+
+.project-logo-bi {
+  background:
+    radial-gradient(circle at 28% 34%, rgba(255,255,255,.24) 0 8%, transparent 9%),
+    linear-gradient(135deg, #153c5c, #258fb0);
+}
+
+.project-logo-trec {
+  background: linear-gradient(135deg, #18364e, #4e6b80);
+}
+
+.project-logo-exist {
+  background: linear-gradient(135deg, #70274e, #d44f87);
+}
+
+.research-project-body {
+  flex: 1;
+  padding: 1.35rem 1.25rem;
+  text-align: center;
+}
+
+.research-project-body h3 {
+  margin: 0 0 0.75rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.research-project-body p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.research-project-footer {
+  min-height: 58px;
+  display: grid;
+  place-items: center;
+  padding: 0.85rem 1rem;
+  background: var(--surface-soft);
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.research-project-footer a {
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.research-project-footer span {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+/* Floating back-to-top button */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 900;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.back-to-top:hover {
+  background: var(--accent-dark);
+}
+
+@media (max-width: 1180px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .research-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .research-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .research-project-card {
+    min-height: auto;
+  }
+}
