@@ -1182,3 +1182,11 @@ footer {
   font-weight: 800;
   line-height: 1;
 }
+
+
+.form-help {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.84rem;
+}
